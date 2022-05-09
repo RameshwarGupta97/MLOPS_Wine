@@ -12,12 +12,14 @@ jobs:
         run: |
           # Your ML workflow goes here
           pip install -r requirements.txt
+          echo "test1"
           python train.py
-          
+          echo "test2"
           echo "## Model metrics" > report.md
           cat metrics.txt >> report.md
-          
+          echo "test3"
           echo "## Data viz" >> report.md
+          echo "test4"
           # cml-publish feature_importance.png --md >> report.md
           # cml-publish residuals.png --md >> report.md
           
